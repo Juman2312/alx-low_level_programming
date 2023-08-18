@@ -7,7 +7,7 @@
  *		jhkhkhkjbbhg
 */
 
-void print_line(int n);
+void print_line(int n)
 {
 	int lnChar;
 
@@ -19,5 +19,4 @@ void print_line(int n);
 			_putchar('_');
 		_putchar('\n');
 	}
-
 }
