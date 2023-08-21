@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * puts-half - nhjm njmh bhn njmk
+ * puts_half - nhjm njmh bhn njmk
  *
  * @str: bnhj njmkh bhnmj
  *
