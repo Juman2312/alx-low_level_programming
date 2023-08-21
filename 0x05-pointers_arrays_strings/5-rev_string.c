@@ -16,10 +16,10 @@ void rev_string(char *s)
 		;
 
 	/*jgnh nbhgj nghmj jnjg ngjkfj*/
-	for (i = 0; i < 1 / 2; i++)
+	for (i = 0; i < l / 2; i++)
 	{
 		temp = s[i];
-		s[i] = s[l - l - i]; /*-l nhbg nhgbf nhjmn jm 0*/
-		s[l - l - i] = temp;
+		s[i] = s[l - 1 - i]; /*-1 nhbg nhgbf nhjmn jm 0*/
+		s[l - 1 - i] = temp;
 	}
 }
