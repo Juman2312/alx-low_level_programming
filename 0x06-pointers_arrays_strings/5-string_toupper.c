@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * *string_toupper - njh nbhgb vgfcd
+ * string_toupper - njh nbhgb vgfcd
+ * @n: vnvbh bhv nb
  *
- * @str: nbhgf vgfd cf
  * Return: vgfb bghn nh
 */
 
@@ -11,12 +11,15 @@ char *string_toupper(char *)
 {
 	int i;
 
-	for (i = 0; str[i] != '\0'; i++)
+	i = 0;
+
+	while (n[i] != '\0')
 	{
-		if (str[i] >= 97 && str[i] <= 122)
+		if (n[i] >= 97 && n[i] <= 122)
 		{
-			str[i] = str[i] - 32;
+			n[i] = n[i] - 32;
+			i++;
 		}
 	}
-	return (str);
+	return (n);
 }
