@@ -1,46 +1,30 @@
 #include "main.h"
 
 /**
- * isDelimiter - njhnb grygfv dvc vgf vcg
- * @c: bhn bhgb nhuy bhgf
- * Return: nhju vcgdt
-*/
-
-int isDelimiter(char c)
-{
-	int i;
-	char delimiter[] = " \t\n, .!?\"(){}";
-
-	for (i = 0; i < 12; i++)
-		if (c == delimiter[i])
-			return (1);
-	return (0);
-}
-
-
-/**
  * cap_string - capitalizes all words of string
- * @s: input string
+ * @str: input string
+ * '': bvgfvc vfcd cvd vf
  * Return: string with capitalized words
 */
 
 char *cap_string(char *)
 {
-	char *ptr = s;
-	int foundDelimit = 1;
+	int i, j;
+	char c[] = {44, 59, 46, '!', '?', '"', '(', ')', '{', '}', ' ', '\t', '\n'};
 
-	while (*s)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (isDelimiter(*s))
-			foundDelimit = 1;
-		else if (isLower(*s) && foundDelimit)
+		if (i == 0 && str[i] >= 'a' && str[i] <= 'z')
 		{
-			*s -= 32;
-			foundDelimit = 0;
+			str[i] = str[i] - 32;
 		}
-		else
-			foundDelimit = 0;
-		s++;
+		for (j = 0; c[j] != '\0'; j++)
+		{
+			if (c[j] == str[i] && (str[i + 1] >= 'a' && str[i + 1] <= 'z'))
+			{
+				str[i + 1] = str[i + 1] - 32;
+			}
+		}
 	}
-	return (ptr);
+	return (str);
 }
