@@ -2,7 +2,8 @@
 
 /**
  * string_toupper - njh nbhgb vgfcd
- * @n: vnvbh bhv nb
+ *
+ * @str: bhgvgff cvf cvf vf cvfgbh
  *
  * Return: vgfb bghn nh
 */
@@ -11,15 +12,12 @@ char *string_toupper(char *)
 {
 	int i;
 
-	i = 0;
-
-	while (n[i] != '\0')
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (n[i] >= 97 && n[i] <= 122)
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			n[i] = n[i] - 32;
-			i++;
+			str[i] = str[i] - 32;
 		}
 	}
-	return (n);
+	return (str);
 }
