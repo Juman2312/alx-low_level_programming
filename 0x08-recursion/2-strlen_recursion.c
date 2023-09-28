@@ -17,5 +17,5 @@ _strlen_recursion - Returns the length of a string.
 		longit +=
 			_strlen_recursion(s + 1);
 	}
-	return (long);
+	return (longit);
 }
